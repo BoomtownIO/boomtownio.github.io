@@ -84,10 +84,6 @@ html {
 	display: none;
 }
 
-.page-template-page_builder-php #contact {
-	padding-top: 0;
-}
-
 .page-template-page_builder-php.has-no-contact .pagebuilder-content {
 	padding-bottom: 0;
 }
@@ -191,7 +187,7 @@ html {
 	cursor: pointer;
 }
 
-@-moz-document url-prefix() { 
+@-moz-document url-prefix() {
 	input[type="submit"] {
 		line-height: 15px;
 	}

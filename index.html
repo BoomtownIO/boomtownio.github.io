@@ -16,8 +16,6 @@
 		<script type="text/javascript">if(Function('/*@cc_on return document.documentMode===10@*/')()){document.documentElement.className+=' ie10';}</script>
 		<script type="text/javascript">(function(H){H.className=H.className.replace(/\bno-js\b/,'js')})(document.documentElement)</script>
 
-		<!-- favicon -->
-
 		<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Open+Sans:400italic,300,400,700,800,100%7CRaleway:400,100,300,700&amp;subset=latin,latin-ext" />
 
 <link rel="canonical" href="http://www.boomtown.tech/" />
@@ -45,43 +43,11 @@ img.emoji {
 <link rel='stylesheet' href='css/style.css?ver=1403833850' type='text/css' media='all' />
 <link rel='stylesheet' id='pe_theme_momentum-custom-css'  href='css/custom.css' type='text/css' media='all' />
 <link rel='stylesheet' href='css/main.css' type='text/css' media='all' />
-<link rel='stylesheet' id='contact-form-7-css'  href='css/styles.css?ver=4.5.1' type='text/css' media='all' />
-<link rel='stylesheet' id='qtip-css'  href='http://cdnjs.cloudflare.com/ajax/libs/qtip2/2.2.0/jquery.qtip.min.css?ver=86e871bb20ccacd6fa87f032c38020e0' type='text/css' media='all' />
 <script type='text/javascript' src='js/jquery.js?ver=1.12.4'></script>
 <link rel='shortlink' href='http://www.boomtown.tech/' />
-<script type="text/javascript">
-(function(url){
-	if(/(?:Chrome\/26\.0\.1410\.63 Safari\/537\.31|WordfenceTestMonBot)/.test(navigator.userAgent)){ return; }
-	var addEvent = function(evt, handler) {
-		if (window.addEventListener) {
-			document.addEventListener(evt, handler, false);
-		} else if (window.attachEvent) {
-			document.attachEvent('on' + evt, handler);
-		}
-	};
-	var removeEvent = function(evt, handler) {
-		if (window.removeEventListener) {
-			document.removeEventListener(evt, handler, false);
-		} else if (window.detachEvent) {
-			document.detachEvent('on' + evt, handler);
-		}
-	};
-	var evts = 'contextmenu dblclick drag dragend dragenter dragleave dragover dragstart drop keydown keypress keyup mousedown mousemove mouseout mouseover mouseup mousewheel scroll'.split(' ');
-	var logHuman = function() {
-		var wfscr = document.createElement('script');
-		wfscr.type = 'text/javascript';
-		wfscr.async = true;
-		wfscr.src = url + '&r=' + Math.random();
-		(document.getElementsByTagName('head')[0]||document.getElementsByTagName('body')[0]).appendChild(wfscr);
-		for (var i = 0; i < evts.length; i++) {
-			removeEvent(evts[i], logHuman);
-		}
-	};
-	for (var i = 0; i < evts.length; i++) {
-		addEvent(evts[i], logHuman);
-	}
-})('//www.boomtown.tech/?wordfence_logHuman=1&hid=A05093893D98CA1D1441522766D36F0A');
-</script>		<style type="text/css">.recentcomments a{display:inline !important;padding:0 !important;margin:0 !important;}</style>
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+<link rel="icon" href="favicon.ico" type="image/x-icon">
+<style type="text/css">.recentcomments a{display:inline !important;padding:0 !important;margin:0 !important;}</style>
 
 
 <style type="text/css">body,blockquote small,.o-hover em{font-family:'Open Sans';}h1,h2,h3,h4,h5,h6,.h1,.h2,.h3,.h4,.h5,.h6,.uber,.btn,button,input[type="submit"],a.arrow-link,.o-hover span,.menu,.icon-nav b,.menu{font-family:'Raleway';}</style><style type="text/css" id="pe-theme-custom-colors">.text-color{color:#3686be;}.btn.outline.color{color:#3686be;}a.arrow-link:hover{color:#3686be;}a.arrow-link:hover:before{color:#3686be;}.service-item:hover>i{color:#3686be;}.service-item:hover>a.arrow-link:before{color:#3686be;}.c-details a:hover{color:#3686be;}.c-details a:hover i{color:#3686be;}a.btn:hover{background-color:#3686be;}button:hover{background-color:#3686be;}input[type='submit']:hover{background-color:#3686be;}a .icon:hover{background-color:#3686be;}.icon-nav a:hover>i{background-color:#3686be;}a>.back-top{background-color:#3686be;}a >.back-top{background-color:#3686be;background-color:rgba(54,134,190,0.9);}a.btn.outline:hover{background-color:#3686be;}button.outline:hover{background-color:#3686be;}input[type='submit'].outline:hover{background-color:#3686be;}.btn.color{background-color:#3686be;}* .btn.outline.color{background-color:#3686be;}* a.btn.outline:hover{border-color:#3686be;}* button.outline:hover{border-color:#3686be;}* input[type='submit'].outline:hover{border-color:#3686be;}</style>	</head>
@@ -148,7 +114,7 @@ img.emoji {
 
 
 <div id="default-version" class="pagebuilder-content">
-<section class="padding-top-large padding-bottom-large  bg-image-cover section-type-intro" id="section-intro" style="background-color: #fff;">
+<section class="padding-top-large padding-bottom-large  bg-image-cover section-type-intro" id="intro" style="background-color: #fff;">
 
 
 
@@ -206,7 +172,7 @@ img.emoji {
 
 
 
-	<section id="section-contact" class="contact">
+	<section id="contact" class="contact">
 
 
 			<div class="row title">
@@ -223,15 +189,15 @@ img.emoji {
 				<!-- Succes message after sending the form, see also the php file around line 90 -->
 				<div id="message" class="c-message"></div>
 
-				<form method="post" name="contactform" id="contactform" class="form c-form peThemeContactForm">
+				<form method="post" id="contact-form" class="form c-form peThemeContactForm" action="https://formspree.io/hello@boomtown.tech">
 					<fieldset>
-						<input name="author" type="text" id="name" placeholder="Your Name" />
-						<input name="email" type="text" id="email" placeholder="Your E-mail" />
+						<input name="name" type="text" id="name" placeholder="Your Name" />
+						<input name="_replyto" type="text" id="email" placeholder="Your E-mail" />
 						<textarea name="message" id="comments" placeholder="Message"></textarea>
 						<input type="submit" class="submit btn outline green" id="submit" value="Send message" />
 					</fieldset>
 
-				<div id="contactFormSent" class="formSent response-message"><strong>Yay!</strong> Message sent.</div>
+				<div id="contactFormSent" class="formSent response-message"><strong>Submitted!</strong> Message sent. We'll be in touch.</div>
 				<div id="contactFormError" class="formError response-message"><strong>Error!</strong> Please validate your fields.</div>
 
 				</form>
@@ -337,24 +303,21 @@ All other trademarks and copyrights are property of their respective owners.<br>
 			    $("#services-slider").trigger('owl.prev');
 			  })
 
-			  // show featured project launch button on rollover
-			  $("#section-featured-project .overlay").mouseenter(function() {
-				 $("#section-featured-project .overlay .launch").css('display', 'inline-block');
-			  });
-			  $("#section-featured-project .overlay").mouseleave(function() {
-				 $("#section-featured-project .overlay .launch").hide();
-			  });
+				//form sumbit
+				$('#contact-form').on('submit', function() {
+			    $(".formSent").show();
+				});
 
 
-				// Smooth Scroll pricing table on wind hosting page
-				jQuery(function($) {
-				  $('a[href*=\\#]:not([href=\\#])').click(function() {
+				// Smooth Scroll
+				$(function() {
+				  $('a[href*="#"]:not([href="#"])').click(function() {
 				    if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
 				      var target = $(this.hash);
 				      target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
 				      if (target.length) {
-				        $('html,body').animate({
-				          scrollTop: target.offset().top - 150
+				        $('html, body').animate({
+				          scrollTop: target.offset().top
 				        }, 1000);
 				        return false;
 				      }
@@ -362,15 +325,10 @@ All other trademarks and copyrights are property of their respective owners.<br>
 				  });
 				});
 
-				$('#offsets .wpcf7 form p br').remove();
-				$('#offsets.buyer .wpcf7 .wpcf7-form-control-wrap.first-name').before("<h3>I want to offset my nationbuilder website</h3>");
-				$('#offsets.viewer .wpcf7 .wpcf7-form-control-wrap.first-name').before("<h3>I want to fight climate change</h3>");
-
 			});
 		</script>
 
 <script type='text/javascript' src='js/theme.min.js'></script>
-<script type='text/javascript' src='js/jquery.form.min.js?ver=3.51.0-2014.06.20'></script>
 
 </body>
 </html>
